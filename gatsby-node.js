@@ -37,7 +37,10 @@ exports.createPages = ({ graphql, actions}) => {
 
             createPage({
                 path: frontmatter.path,
-                component: postTemplate
+                component: postTemplate,
+                context: {
+                    path: frontmatter.path
+                }
             });
         });
     });
